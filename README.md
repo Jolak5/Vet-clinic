@@ -45,14 +45,14 @@ This repository includes files with plain SQL that can be used to recreate a dat
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.w3schools.com/sql/">SQL</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.postgresql.org/">PG admin</a></li>
   </ul>
 </details>
 
@@ -70,6 +70,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 > Describe between 1-3 key features of the application.
 
 - **Animals table**
+- **animals owners table**
+- **clinic employees table**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
