@@ -1,6 +1,3 @@
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
@@ -48,14 +45,14 @@ This repository includes files with plain SQL that can be used to recreate a dat
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.w3schools.com/sql/">SQL</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.postgresql.org/">PG admin</a></li>
   </ul>
 </details>
 
@@ -73,6 +70,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 > Describe between 1-3 key features of the application.
 
 - **Animals table**
+- **animals owners table**
+- **clinic employees table**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,9 +115,9 @@ In order to run this project you need:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **implement add join table**
+- [ ] **add database performance audit**
+- [ ] **database schema diagram**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
