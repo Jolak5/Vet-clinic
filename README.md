@@ -115,9 +115,9 @@ In order to run this project you need:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **implement add join table**
+- [ ] **add database performance audit**
+- [ ] **database schema diagram**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
