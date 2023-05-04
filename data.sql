@@ -10,3 +10,45 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom', '13-10-1998', 3, true, 17);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Ditto', '14-05-2022', 4, true, 22);
 
+
+-- add data to owners table
+
+INSERT INTO owners(full_name, age) VALUES('Sam Smith', 34);
+INSERT INTO owners(full_name, age) VALUES('Jennifer Orwell', 19);
+INSERT INTO owners(full_name, age) VALUES('Bob ', 45);
+INSERT INTO owners(full_name, age) VALUES('Melody Pond', 77);
+INSERT INTO owners(full_name, age) VALUES('Dean Winchester', 14);
+INSERT INTO owners(full_name, age) VALUES('Jodie Whittaker', 38);
+
+-- add data to species
+
+INSERT INTO species(name) VALUES('Digimon');
+INSERT INTO species(name) VALUES('Pokemon');
+
+
+-- update species_id in animals
+
+BEGIN TRANSACTION;
+UPDATE animals
+SET species_id = 2 WHERE name LIKE '%mon';
+UPDATE animals
+SET species_id = 1 WHERE species_id IS NULL;
+COMMIT TRANSACTION;
+
+
+
+-- update owners_id 
+
+BEGIN TRANSACTION;
+UPDATE animals SET owner_id = 1 WHERE name IN ('Agumon');
+UPDATE animals SET owner_id=2 WHERE name IN ('Gabumon','Pikachu');
+UPDATE animals SET owner_id=3 WHERE name IN ('Devimon','Plantmon');
+UPDATE animals SET owner_id=4 WHERE name IN ('Charmander','Squirtle','Blossom');
+UPDATE animals SET owner_id=5 WHERE name IN ('Angemon','Boarmon');
+COMMIT TRANSACTION;
+
+
+
+
+
+

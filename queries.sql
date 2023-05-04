@@ -39,3 +39,39 @@ SELECT max(escape_attempts) as number_of_escapes, neutered  FROM animals  GROUP 
 
 SELECT species, max(weight_kg), min(weight_kg)  FROM animals  GROUP BY species
 SELECT species, avg(escape_attempts) from animals WHERE  EXTRACT(YEAR FROM date_of_birth) BETWEEN 1990 AND 2000 GROUP BY species
+
+
+-- join tables 
+
+select  name, owner_id, full_name from animals inner join owners OO ON owner_id = OO.id WHERE full_name = 'Melody Pond'
+
+select  AA.name, ss.name from animals AA join species ss ON AA.species_id = ss.id WHERE ss.name = 'Pokemon'
+
+select  AA.name, oo.full_name from animals AA  full outer join owners oo ON AA.owner_id = oo.id 
+ORDER BY full_name ASC
+
+select  ss.name, count(AA.name)  from animals AA  join species ss ON AA.species_id = ss.id GROUP BY ss.name
+
+-- List all Digimon owned by Jennifer Orwell.
+
+select  AA.name  
+from animals AA  
+join species ss ON AA.species_id = ss.id 
+join owners oo ON AA.owner_id = oo.id
+WHERE oo.full_name = 'Jennifer Orwell' and ss.name ='Digimon'
+
+-- List all animals owned by Dean Winchester that haven't tried to escape. 
+
+select  AA.name  
+from animals AA  
+join owners oo ON AA.owner_id = oo.id
+WHERE oo.full_name = 'Dean Winchester' and AA.escape_attempts =0
+
+-- Who owns the most animals?
+
+select  oo.full_name, (COUNT(AA.owner_id)) as count
+from animals AA  
+join owners oo ON AA.owner_id = oo.id
+GROUP BY oo.full_name 
+ORDER BY count DESC
+LIMIT 1
